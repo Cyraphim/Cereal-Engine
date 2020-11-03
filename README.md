@@ -13,13 +13,13 @@ It has an Entity Component System, A basic Input System, Mesh Rendering and an O
 - GLM
 
 ## Links
-- Twitch : https://www.twitch.tv/DaSerialGenius
+- **Twitch :** https://www.twitch.tv/DaSerialGenius
     - I stream twice a week, you can check out the schedule in my channel so that its according to your timezone!
-- Youtube: https://youtube.com/c/DaSerialGenius
+- **Youtube:** https://youtube.com/c/DaSerialGenius
     - I upload clips of my stream here, be sure to subscribe here in case you miss something!
-- Trello : https://trello.com/b/Dpa4KPCD/cereal-engine-progress-tracker
+- **Trello :** https://trello.com/b/Dpa4KPCD/cereal-engine-progress-tracker
     - Keep track of how the project is going and where it is headed!
-- Discord: https://discord.com/invite/Fb5zEvZaAV
+- **Discord:** https://discord.com/invite/Fb5zEvZaAV
     - I've started posting regular updates on here related to my game engine as well as a place where we can just hang out and chill!
 
 ## Project Timeline
