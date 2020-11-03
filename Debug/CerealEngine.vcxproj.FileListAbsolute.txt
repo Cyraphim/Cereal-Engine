@@ -1,0 +1,2 @@
+C:\Users\daser\source\repos\CerealEngine\Debug\CerealEngine.exe
+C:\Users\daser\source\repos\CerealEngine\Debug\CerealEngine.pdb
