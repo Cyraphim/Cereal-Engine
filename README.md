@@ -25,20 +25,20 @@ It has an Entity Component System, A basic Input System, Mesh Rendering and an O
 ## Project Timeline
 The project is being developed in my livestreams over at [my twitch!](https://www.twitch.tv/DaSerialGenius) You can also check out the older stuff on this [playlist](https://www.youtube.com/playlist?list=PLi8sYAtVw4hYDBsHXkp2sO-ULponI6s0e) You can really tell how much I've grown as a programmer in these short streams!
 
-- Day #1: [Video](https://www.youtube.com/watch?v=FQH39y_mFAg&list=PLi8sYAtVw4hYDBsHXkp2sO-ULponI6s0e&index=1) - I got a window running with SDL and a GL Context as well as set up GLAD
+- **Day #1:** [Video](https://www.youtube.com/watch?v=FQH39y_mFAg&list=PLi8sYAtVw4hYDBsHXkp2sO-ULponI6s0e&index=1) - I got a window running with SDL and a GL Context as well as set up GLAD
 
-- Day #2: [Video](https://www.youtube.com/watch?v=OzZp3_YcMFw&list=PLi8sYAtVw4hYDBsHXkp2sO-ULponI6s0e&index=2) - I made a shader class and get a Triangle on the screen!
+- **Day #2:** [Video](https://www.youtube.com/watch?v=OzZp3_YcMFw&list=PLi8sYAtVw4hYDBsHXkp2sO-ULponI6s0e&index=2) - I made a shader class and get a Triangle on the screen!
 
-- Day #3: [Video](https://www.youtube.com/watch?v=r6t9bcB4Vmo&list=PLi8sYAtVw4hYDBsHXkp2sO-ULponI6s0e&index=3) - Here I make a Mesh Class and use it to render a cube (We see only one side but it is indeed a square!)
+- **Day #3:** [Video](https://www.youtube.com/watch?v=r6t9bcB4Vmo&list=PLi8sYAtVw4hYDBsHXkp2sO-ULponI6s0e&index=3) - Here I make a Mesh Class and use it to render a cube (We see only one side but it is indeed a square!)
 
-- Day #4: [Video](https://www.youtube.com/watch?v=OPXHCvx2KYc&list=PLi8sYAtVw4hYDBsHXkp2sO-ULponI6s0e&index=4) - I made the object loader so that I can load in any OBJ file I like!
+- **Day #4:** [Video](https://www.youtube.com/watch?v=OPXHCvx2KYc&list=PLi8sYAtVw4hYDBsHXkp2sO-ULponI6s0e&index=4) - I made the object loader so that I can load in any OBJ file I like!
 
-- Day #5: [Video](https://www.youtube.com/watch?v=Zh1QpPTTsIA&list=PLi8sYAtVw4hYDBsHXkp2sO-ULponI6s0e&index=5) - [Huge jump in quality alert!] I fixed a huge bug that I found out later that was causing issues with how things were being rendered.
+- **Day #5:** [Video](https://www.youtube.com/watch?v=Zh1QpPTTsIA&list=PLi8sYAtVw4hYDBsHXkp2sO-ULponI6s0e&index=5) - **[Huge jump in quality alert!]** I fixed a huge bug that I found out later that was causing issues with how things were being rendered.
 
-- Day #6: [Video](https://www.youtube.com/watch?v=5hXHWsfi4Vw&list=PLi8sYAtVw4hYDBsHXkp2sO-ULponI6s0e&index=7) - I implemented an Entity Component System similar to the one that is in Unity.
+- **Day #6:** [Video](https://www.youtube.com/watch?v=5hXHWsfi4Vw&list=PLi8sYAtVw4hYDBsHXkp2sO-ULponI6s0e&index=7) - I implemented an Entity Component System similar to the one that is in Unity.
 
-- Day #7: [Video](https://www.youtube.com/watch?v=K4peaR7EfjA&list=PLi8sYAtVw4hYDBsHXkp2sO-ULponI6s0e&index=8) - I made a nice little input system that takes in keyboard and mouse states. 
+- **Day #7:** [Video](https://www.youtube.com/watch?v=K4peaR7EfjA&list=PLi8sYAtVw4hYDBsHXkp2sO-ULponI6s0e&index=8) - I made a nice little input system that takes in keyboard and mouse states. 
 
-- Day #8a: Video (Coming Soon!) - I forgot to make deltaTime so I added that here now!
+- **Day #8a:** **Video (Coming Soon!)** - I forgot to make deltaTime so I added that here now!
 
-- Day #8b: Video (Coming Soon!) - I made a working camera, except it only moves its position right now, I'll add rotation next stream! Be sure to catch me then!
+- **Day #8b:** **Video (Coming Soon!)** - I made a working camera, except it only moves its position right now, I'll add rotation next stream! Be sure to catch me then!
