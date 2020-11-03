@@ -1,7 +1,7 @@
 # Cereal Engine
 ### PROJECT TIMELINE IS AT THE BOTTOM
 ## Introduction
-Cereal Engine is a 3D + 2D game engine written in C++ live on [my twitch channel!](twitch.tv/DaSerialGenius).  I actually have no clue how to make a game engine, so I'm making it up as I go along, but as long as I'm making progress who cares right? I'm hoping to have a nice little almost usable thing going by next year April. I'm the only one working on this as I am learning how to make the game engine as I go along. 
+Cereal Engine is a 3D + 2D game engine written in C++ live on [my twitch channel!](https://www.twitch.tv/DaSerialGenius).  I actually have no clue how to make a game engine, so I'm making it up as I go along, but as long as I'm making progress who cares right? I'm hoping to have a nice little almost usable thing going by next year April. I'm the only one working on this as I am learning how to make the game engine as I go along. 
 
 It has an Entity Component System, A basic Input System, Mesh Rendering and an OBJ loader already with a bunch more features on the way. You can check out the progress on my [Trello Board!](https://trello.com/b/Dpa4KPCD/cereal-engine-progress-tracker)
 
@@ -13,7 +13,7 @@ It has an Entity Component System, A basic Input System, Mesh Rendering and an O
 - GLM
 
 ## Links
-- Twitch : https://twitch.tv/DaSerialGenius
+- Twitch : https://www.twitch.tv/DaSerialGenius
     - I stream twice a week, you can check out the schedule in my channel so that its according to your timezone!
 - Youtube: https://youtube.com/c/DaSerialGenius
     - I upload clips of my stream here, be sure to subscribe here in case you miss something!
@@ -23,7 +23,7 @@ It has an Entity Component System, A basic Input System, Mesh Rendering and an O
     - I've started posting regular updates on here related to my game engine as well as a place where we can just hang out and chill!
 
 ## Project Timeline
-The project is being developed in my livestreams over at [my twitch!](twitch.tv/DaSerialGenius) You can also check out the older stuff on this [playlist](https://www.youtube.com/playlist?list=PLi8sYAtVw4hYDBsHXkp2sO-ULponI6s0e) You can really tell how much I've grown as a programmer in these short streams!
+The project is being developed in my livestreams over at [my twitch!](https://www.twitch.tv/DaSerialGenius) You can also check out the older stuff on this [playlist](https://www.youtube.com/playlist?list=PLi8sYAtVw4hYDBsHXkp2sO-ULponI6s0e) You can really tell how much I've grown as a programmer in these short streams!
 
 - Day #1: [Video](https://www.youtube.com/watch?v=FQH39y_mFAg&list=PLi8sYAtVw4hYDBsHXkp2sO-ULponI6s0e&index=1) - I got a window running with SDL and a GL Context as well as set up GLAD
 
