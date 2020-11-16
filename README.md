@@ -39,6 +39,11 @@ The project is being developed in my livestreams over at [my twitch!](https://ww
 
 - **Day #7:** [Video](https://www.youtube.com/watch?v=K4peaR7EfjA&list=PLi8sYAtVw4hYDBsHXkp2sO-ULponI6s0e&index=8) - I made a nice little input system that takes in keyboard and mouse states. 
 
-- **Day #8a:** [Video](https://youtu.be/CrXhpWFcUjo) - I forgot to make deltaTime so I added that here now!
+- **Day #8a:** [Video](https://www.youtube.com/watch?v=CrXhpWFcUjo&list=PLi8sYAtVw4hYDBsHXkp2sO-ULponI6s0e&index=9) - I forgot to make deltaTime so I added that here now!
 
-- **Day #8b:** **Video (Coming Soon!)** - I made a working camera, except it only moves its position right now, I'll add rotation next stream! Be sure to catch me then!
+- **Day #8b:** [Video](https://www.youtube.com/watch?v=Whv6VqDVaIQ&list=PLi8sYAtVw4hYDBsHXkp2sO-ULponI6s0e&index=10) - I made a working camera, except it only moves its position right now. Rotation added in the very next stream!
+
+- **Day #9:** [Video](https://www.youtube.com/watch?v=VUu3hy6vkls&list=PLi8sYAtVw4hYDBsHXkp2sO-ULponI6s0e&index=11) - I figured out how camera rotations works finally!
+
+- **Day #10:** [Video](https://www.youtube.com/watch?v=VQg-kdZBHSE&list=PLi8sYAtVw4hYDBsHXkp2sO-ULponI6s0e&index=12) - Made a nice little textured cube! 
+
