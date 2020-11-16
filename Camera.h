@@ -7,9 +7,12 @@
 struct Camera : Component
 {
 	private:
+		// Position and rotation of the camera
 		Transform* transform;
 	public:
+		// The direction the camera is pointing
 		glm::vec3 forward;
+
 		glm::vec3 up;
 		glm::mat4 perspective;
 
@@ -31,9 +34,19 @@ struct Camera : Component
 		}
 
 		
+		// THIS CODE DOES NOT ACCOUNT FOR ROLL
+		// TODO: FIGURE IT OUT, BITCH
 		glm::mat4 GetViewMatrix()
 		{
-			return perspective * glm::lookAt(transform->position, transform->position + forward, up);
+			auto Forward = forward * glm::mat3(glm::rotate(glm::mat4(1), transform->rotation.x, glm::vec3(0, 1, 0)));
+			Forward = Forward * glm::mat3(glm::rotate(glm::mat4(1), transform->rotation.y, glm::vec3(1, 0, 0)));
+					
+
+			auto Right = glm::cross(Forward, up);
+			
+			auto Up = glm::cross(Right, Forward);
+
+			return perspective * glm::lookAt(transform->position, transform->position + Forward, Up);
 		}
 };
 

@@ -2,3 +2,5 @@ C:\Users\daser\source\repos\CerealEngine\x64\Debug\CerealEngine.exe
 C:\Users\daser\source\repos\CerealEngine\x64\Debug\CerealEngine.pdb
 C:\Users\daser\source\repos\CerealEngine\Cereal-Engine\x64\Debug\CerealEngine.exe
 C:\Users\daser\source\repos\CerealEngine\Cereal-Engine\x64\Debug\CerealEngine.pdb
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\x64\Debug\CerealEngine.exe
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\x64\Debug\CerealEngine.pdb

@@ -1,0 +1,179 @@
+﻿  Application.cpp
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Mesh.h(184,1): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Loader.h(47,34): warning C4477: 'fscanf_s' : format string '%s' requires an argument of type 'unsigned int', but variadic argument 2 has type 'unsigned __int64'
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Loader.h(47,34): message : this argument is used as a buffer size
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Movement.h(28,1): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Movement.h(32,1): warning C4244: '-=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Movement.h(36,1): warning C4244: '-=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Movement.h(40,1): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Movement.h(45,1): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Movement.h(49,1): warning C4244: '-=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Movement.h(54,1): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Movement.h(58,1): warning C4244: '-=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Movement.h(63,1): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Movement.h(67,1): warning C4244: '-=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Camera.cpp
+  ECS.cpp
+  Input.cpp
+  Loader.cpp
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Mesh.h(184,1): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Loader.h(47,34): warning C4477: 'fscanf_s' : format string '%s' requires an argument of type 'unsigned int', but variadic argument 2 has type 'unsigned __int64'
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Loader.h(47,34): message : this argument is used as a buffer size
+  main.cpp
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Mesh.h(184,1): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Loader.h(47,34): warning C4477: 'fscanf_s' : format string '%s' requires an argument of type 'unsigned int', but variadic argument 2 has type 'unsigned __int64'
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Loader.h(47,34): message : this argument is used as a buffer size
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Movement.h(28,1): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Movement.h(32,1): warning C4244: '-=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Movement.h(36,1): warning C4244: '-=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Movement.h(40,1): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Movement.h(45,1): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Movement.h(49,1): warning C4244: '-=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Movement.h(54,1): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Movement.h(58,1): warning C4244: '-=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Movement.h(63,1): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Movement.h(67,1): warning C4244: '-=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Mesh.cpp
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Mesh.h(184,1): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
+  Movement.cpp
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Movement.h(28,1): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Movement.h(32,1): warning C4244: '-=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Movement.h(36,1): warning C4244: '-=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Movement.h(40,1): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Movement.h(45,1): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Movement.h(49,1): warning C4244: '-=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Movement.h(54,1): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Movement.h(58,1): warning C4244: '-=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Movement.h(63,1): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\daser\source\repos\DaSerialGenius\Cereal-Engine\Movement.h(67,1): warning C4244: '-=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Settings.cpp
+  Shader.cpp
+  stb_image.cpp
+  Time.cpp
+  Transform.cpp
+  glad.c
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 787 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  CerealEngine.vcxproj -> C:\Users\daser\Source\Repos\DaSerialGenius\Cereal-Engine\x64\Release\CerealEngine.exe

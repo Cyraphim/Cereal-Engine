@@ -1,8 +1,6 @@
 #pragma once
 
 #include <iostream>
-#include <fstream>
-#include <sstream>
 
 #include "Mesh.h"
 
@@ -24,56 +22,111 @@ class Loader
 			return instance;
 		}
 		
+		// LOADS ONLY OBJ FILES
 		Mesh* LoadMesh(std::string filePath)
 		{
 			std::vector<glm::vec3> vert;
-			std::vector<unsigned int> vertIndices;
+			std::vector<unsigned int> vi;
 
-			std::stringstream ss;
-			std::ifstream in_file(filePath);
-			std::string line = "";
-			std::string prefix = "";
+			std::vector<glm::vec2> texture;
+			std::vector<unsigned int> ti;
 
-			if (!in_file.is_open())
+			std::vector<glm::vec3> normal;
+			std::vector<unsigned int> ni;
+
+
+			FILE* meshFile;
+			auto error = fopen_s(&meshFile, filePath.c_str(), "r");
+
+			if (error != 0)
 			{
 				std::cout << "ERROR: Could not open file => " << filePath << std::endl;
 			}
-
-			while (std::getline(in_file, line))
+			fseek(meshFile, 0L, SEEK_SET);
+			while (true)
 			{
-				ss.clear();
-				ss.str(line);
-				ss >> prefix;
+				char lineHeader[128];
+				// read the first word of the line
+				int res = fscanf_s(meshFile, "%s", lineHeader, _countof(lineHeader));
+				if (res == EOF)
+					break;
 
-				if (line == "" || prefix == "#")
-				{
-					continue;
-				}
-
-				if (prefix == "v")
+				if (strcmp(lineHeader, "v") == 0)
 				{
 					glm::vec3 temp;
-					ss >> temp.x >> temp.y >> temp.z;
-					temp.x /= 2; temp.y /= 2; temp.z /= 2;
+					fscanf_s(meshFile, "%f %f %f\n", &(temp.x), &(temp.y), &(temp.z));
 					vert.push_back(temp);
 				}
-				if (prefix == "f")
+				else if (strcmp(lineHeader, "vt") == 0)
 				{
-					GLuint x, y, z;
-					ss >> x >> y >> z;
-					x -= 1;
-					y -= 1;
-					z -= 1;
+					glm::vec2 temp;
+					fscanf_s(meshFile, "%f %f\n", &(temp.x), &(temp.y));
+					texture.push_back(temp);
+				}
+				else if (strcmp(lineHeader, "vn") == 0)
+				{
+					glm::vec3 temp;
+					fscanf_s(meshFile, "%f %f %f\n", &(temp.x), &(temp.y), &(temp.z));
+					normal.push_back(temp);
+				}
 
-					vertIndices.push_back(x);
-					vertIndices.push_back(y);
-					vertIndices.push_back(z);
+				else if (strcmp(lineHeader, "f") == 0)
+				{
+					GLuint xv, yv, zv;
+					GLuint xt, yt, zt;
+					GLuint xn, yn, zn;
+					int matches = fscanf_s(meshFile, "%d/%d/%d %d/%d/%d %d/%d/%d\n", &xv, &xt, &xn, &yv, &yt, &yn, &zv, &zt, &zn);
 					
+					if(matches != 9)
+					{
+						std::cout << "IMPORT ERROR: " << filePath << " (Could not get all indices)" << std::endl;
+						return NULL;
+					}
+
+					xv -= 1;
+					yv -= 1;
+					zv -= 1;
+
+					xt -= 1;
+					yt -= 1;
+					zt -= 1;
+
+					xn -= 1;
+					yn -= 1;
+					zn -= 1;
+
+					vi.push_back(xv);
+					vi.push_back(yv);
+					vi.push_back(zv);
+
+					ni.push_back(xn);
+					ni.push_back(yn);
+					ni.push_back(zn);
+
+					ti.push_back(xt);
+					ti.push_back(yt);
+					ti.push_back(zt);
 				}
 			}
 
+			std::vector<unsigned int> indices;
+			std::vector<Vertex> vertices;
+
+			for (unsigned int i = 0; i < vi.size(); i++)
+			{
+				Vertex v;
+
+				v.position = vert[vi[i]];
+				v.normal = normal[ni[i]];
+				v.texture = texture[ti[i]];
+
+				indices.push_back(i);
+
+				vertices.push_back(v);
+			}
+
 			auto m = new Mesh();
-			m->AddVI(vert,vertIndices);
+			m->AddVI(vertices, indices);
 			m->AddShader();
 			return m;
 		}

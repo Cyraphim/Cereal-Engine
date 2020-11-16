@@ -3,20 +3,28 @@
 #include <iostream>
 #include <map>
 
+// Basic Entity Component System, it is actually just a system of Entities and Components
+// ECS is similar to how it works in Unity.
+
 struct Entity;
 
 struct Component
 {
 	Entity* entity;	
 
+	// Override these to provide functionality
+
+	// Called once in the beginning
 	virtual void Start()
 	{
 	}
 
+	// Called once every frame
 	virtual void Update()
 	{
 	}
 
+	// used for the draw call
 	virtual void Draw()
 	{
 	}
@@ -27,6 +35,7 @@ struct Entity
 	public:
 		std::string _name;
 	private:
+		// Component list, do not steal
 		std::map<std::string, Component*> _components;
 	public:
 
@@ -73,7 +82,8 @@ struct Entity
 			return static_cast<T*>(_components[typeid(T).name()]);
 		}
 
-
+		// This one just copies the component into the map
+		// Had to make it because I'm dumb
 		template <typename T>
 		T* AddComponent(T* component)
 		{
@@ -112,7 +122,8 @@ struct Entity
 		}
 
 		
-
+		// TODO: Get rid of this
+		// TODO: Print everything using IMGUI
 		void ListAllComponents()
 		{
 			for (auto c : _components)

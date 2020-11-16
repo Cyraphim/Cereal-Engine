@@ -51,13 +51,16 @@ void Application::Init()
 
 	std::cout << glGetString(GL_VERSION) << std::endl;
 
-	glClearColor(0.0f,0.0f,0.0f,0.0f);
+	glClearColor(0.05f, 0.1f,0.15f,0.0f);
 	glFrontFace(GL_CCW);
 	glCullFace(GL_BACK);
 	glEnable(GL_CULL_FACE);
 	glEnable(GL_DEPTH_TEST);
+	glEnable(GL_TEXTURE_2D);
 
 	_isRunning = true;
+
+	// TODO: RELOCATE THIS WHEN YOU MAKE A SCENE MANAGEMENT SYSTEM
 	auto potTea = new Entity();
 	potTea->_name = "POTTEA";
 	potTea->AddComponent<Mesh>(Loader::Instance()->LoadMesh("Resources/Meshes/cube.obj"));
@@ -68,6 +71,7 @@ void Application::Init()
 	_camera->AddComponent<Transform>()->position = glm::vec3(0,0,-3);
 	mainCamera = _camera->AddComponent<Camera>();
 	potTea->GetComponent<Mesh>()->main_camera = mainCamera;
+	potTea->GetComponent<Mesh>()->AddTexture("Resources\\Textures\\wall.jpg");
 	gameobjects.push_back(potTea);
 	gameobjects.push_back(_camera);
 	
@@ -98,8 +102,14 @@ void Application::Run()
 					break;
 			}
 		}
+		// ESCAPE QUITS THE PROGRAM
+		// TODO: REMOVE THIS IS FINAL
+		if(Input::Instance()->GetKeyDown(SDL_SCANCODE_ESCAPE))
+		{
+			_isRunning = false;
+		}
 
-		Application::Input();
+		Input::Instance()->Update();
 		Application::Update();
 		Application::Render();
 		Input::Instance()->prevUpdate();
@@ -109,10 +119,6 @@ void Application::Run()
 	Application::Close();
 }
 
-void Application::Input()
-{
-	Input::Instance()->Update();
-}
 
 void Application::Update()
 {
@@ -139,5 +145,6 @@ void Application::Close()
 {
 	SDL_DestroyWindow(_window);
 	SDL_GL_DeleteContext(_context);
+	//IMG_Quit();
 	SDL_Quit();
 }

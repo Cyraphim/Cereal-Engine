@@ -17,22 +17,30 @@ enum MOUSE_STATE
 struct Input
 {
 	private:
+	// SINGLETON
 	static Input* instance;
+
+	// ARRAY OF ALL THE KEYPRESSES AT A GIVEN POINT
 	const Uint8* keyboardState;
 	Uint8* prevKeyboardState;
 	
+	// ALL THE POSSIBLE MOUSE INPUTS AT A GIVEN POINT
 	Uint32 mouseState;
 	Uint32 prevMouseState;
 	
+	// POSITION OF THE MOUSE, YOU FUCKING DUMBASS DID I REALLY NEED TO EXPLAIN THAT?
 	glm::ivec2 mousePosition;
 
 	Input()
 	{
-		SDL_PumpEvents();
+		// Getting the keyboard state
 		keyboardState = SDL_GetKeyboardState(&Settings::numKeys);
+
+		// Initialize prevKeyboardState to avoid bullshit errors
 		prevKeyboardState = new Uint8[Settings::numKeys];
 		memcpy(prevKeyboardState, keyboardState, Settings::numKeys);
 	
+		// Same thing for mouse
 		mouseState = SDL_GetMouseState(&(mousePosition.x), &(mousePosition.y));
 		prevMouseState = mouseState;
 	}
@@ -48,6 +56,7 @@ struct Input
 		return instance;
 	}
 
+	// Setting keyboard and mouse states
 	void Update()
 	{
 		keyboardState = SDL_GetKeyboardState(NULL);
@@ -55,6 +64,7 @@ struct Input
 
 	}
 
+	// Setting states of the last frame
 	void prevUpdate()
 	{
 		memcpy(prevKeyboardState, keyboardState, Settings::numKeys);

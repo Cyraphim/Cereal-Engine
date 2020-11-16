@@ -1,8 +1,13 @@
-#version 330 core
+#version 460 core
+
 out vec4 FragColor;
-in vec3 PosA;
+
+in vec2 TexCoords;
+in vec3 Position;
+
+uniform sampler2D bTexture;
+
 void main()
 {
-   FragColor = vec4(PosA, 1.0f);
-
+      FragColor = texture(bTexture, TexCoords);
 }

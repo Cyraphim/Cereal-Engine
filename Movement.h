@@ -48,6 +48,24 @@ struct Movement : Component
 		{
 			transform->position.y -= 1 * Time::DeltaTime();
 		}
+
+		if (Input::Instance()->GetKeyHeld(SDL_SCANCODE_L))
+		{
+			transform->rotation.x += 1 * Time::DeltaTime();
+		}
+		if (Input::Instance()->GetKeyHeld(SDL_SCANCODE_J))
+		{
+			transform->rotation.x -= 1 * Time::DeltaTime();
+		}
+
+		if (Input::Instance()->GetKeyHeld(SDL_SCANCODE_I))
+		{
+			transform->rotation.y += 1 * Time::DeltaTime();
+		}
+		if (Input::Instance()->GetKeyHeld(SDL_SCANCODE_K))
+		{
+			transform->rotation.y -= 1 * Time::DeltaTime();
+		}
 	}
 };
 
