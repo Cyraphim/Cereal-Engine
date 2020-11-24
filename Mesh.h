@@ -12,6 +12,7 @@
 #include "ECS.h"
 #include "Transform.h"
 #include "Camera.h"
+#include "Time.h"
 
 struct Vertex
 {
@@ -68,6 +69,32 @@ struct Mesh : Component
 			this->vertices = v;
 			this->indices = indices;
 
+			if(textures.size() == 0)
+			{
+				unsigned int TextureID;
+				// Generate textures
+				glGenTextures(1, &TextureID);
+				glBindTexture(GL_TEXTURE_2D, TextureID);
+
+				// Do some settings
+				glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+				glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+				glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+				glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+				int data[] = { 255, 255, 255 };
+
+					glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, 1, 1, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+					glGenerateMipmap(GL_TEXTURE_2D);
+
+					Texture* t = new Texture();
+					t->id = TextureID;
+					t->path = "BullshitCerealCode";
+					t->type = " ";
+
+					textures.push_back(t);
+					
+			}
 			setupMesh();
 	}
 
@@ -99,6 +126,12 @@ struct Mesh : Component
 			t->id = TextureID;
 			t->path = filepath;
 			t->type = " ";
+
+			if(textures[0] && textures[0]->path == "BullshitCerealCode")
+			{
+				textures.clear();
+				std::cout << "default texture replaced" << std::endl;
+			}
 
 			textures.push_back(t);
 			std::cout << "TEXTURE HAS BEEN LOADED" << std::endl;
@@ -137,9 +170,19 @@ struct Mesh : Component
 		glBindVertexArray(0);
 	}
 	
+	// HACK FRAUD BITCH
+	// TODO:
+
+	float zValue;
+	float zPosition = 0;
+	float xValue;
+	float yValue;
+
 	void Draw()
 	{
-		shader->setMat4("model", main_camera->GetViewMatrix() * transform->GetTransformationMatrix());
+		shader->setMat4("model", transform->GetTransformationMatrix());
+		shader->setMat4("view", main_camera->GetViewMatrix());
+		shader->setVec3("cameraPostion", main_camera->entity->GetComponent<Transform>()->position);
 		glBindVertexArray(VAO);
 
 		// Setting all the textures
@@ -149,6 +192,13 @@ struct Mesh : Component
 			glBindTexture(GL_TEXTURE_2D, textures[i]->id);
 		}
 
+		zPosition += Time::DeltaTime();
+		zValue = glm::abs(glm::sin(zPosition)) * -2;
+		xValue = glm::abs(glm::cos(zPosition)) * -2;
+		yValue = glm::abs(glm::sin(3.0f * zPosition)) * 2;
+
+		shader->setVec3("lightingPosition", glm::vec3(xValue, yValue, zValue));
+		shader->setVec3("lightingColor", glm::vec3(0.5f, 0, 1));
 		shader->use();
 		
 		glDrawElements(GL_TRIANGLES, indices.size(), GL_UNSIGNED_INT, 0);

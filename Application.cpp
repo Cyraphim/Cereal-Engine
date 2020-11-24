@@ -51,7 +51,7 @@ void Application::Init()
 
 	std::cout << glGetString(GL_VERSION) << std::endl;
 
-	glClearColor(0.05f, 0.1f,0.15f,0.0f);
+	glClearColor(0.05f, 0.0f,0.15f,0.0f);
 	glFrontFace(GL_CCW);
 	glCullFace(GL_BACK);
 	glEnable(GL_CULL_FACE);
